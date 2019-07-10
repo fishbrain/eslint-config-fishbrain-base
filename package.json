@@ -1,0 +1,36 @@
+{
+  "name": "eslint-config-fishbrain-base",
+  "version": "1.0.0",
+  "description": "ESLint config for Fishbrain TypeScript projects",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "eslint --no-ignore .eslintrc.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishbrain/eslint-config-fishbrain-base.git"
+  },
+  "author": "Fishbrain",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fishbrain/eslint-config-fishbrain-base/issues"
+  },
+  "homepage": "https://github.com/fishbrain/eslint-config-fishbrain-base#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3"
+  }
+}
