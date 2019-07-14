@@ -21,10 +21,10 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'jest', 'fp', 'import', 'prettier'],
+  plugins: ['@typescript-eslint', 'jest', 'fp', 'import'],
   rules: {
     // Core rules replaced by Typescript rules
     'no-use-before-define': 'off',
@@ -89,7 +89,6 @@ module.exports = {
       { allow: ['__PRELOADED_STATE__', '__APOLLO_STATE__'] },
     ],
     'no-console': 'off',
-    'prettier/prettier': 'error',
   },
   parserOptions: {
     project: './tsconfig.json',
