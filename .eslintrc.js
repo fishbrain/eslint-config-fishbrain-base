@@ -86,6 +86,7 @@ module.exports = {
       'error',
       { allow: ['__PRELOADED_STATE__', '__APOLLO_STATE__'] },
     ],
+    'no-console': 'ignore',
   },
   parserOptions: {
     project: './tsconfig.json',
