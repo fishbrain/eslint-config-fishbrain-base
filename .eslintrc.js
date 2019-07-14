@@ -28,6 +28,7 @@ module.exports = {
     // Core rules replaced by Typescript rules
     'no-use-before-define': 'off',
     'consistent-return': 'off', // TypeScript takes care of checking return
+    'import/no-unresolved': 'off' // Doesn't work properly with TypeScript
 
     // Additional Fishbrain rules
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
@@ -86,7 +87,7 @@ module.exports = {
       'error',
       { allow: ['__PRELOADED_STATE__', '__APOLLO_STATE__'] },
     ],
-    'no-console': 'ignore',
+    'no-console': 'off',
   },
   parserOptions: {
     project: './tsconfig.json',
