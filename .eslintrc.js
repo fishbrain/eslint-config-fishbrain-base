@@ -131,6 +131,10 @@ module.exports = {
     // Disallow characters which are made with multiple code points in character class syntax
     // https://eslint.org/docs/rules/no-misleading-character-class
     'no-misleading-character-class': 'error',
+
+    // Disallow unnecessary catch clauses
+    // https://eslint.org/docs/rules/no-useless-catch
+    'no-useless-catch': 'error',
   },
   parserOptions: {
     project: './tsconfig.json',
