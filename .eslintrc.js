@@ -31,6 +31,19 @@ module.exports = {
     'no-use-before-define': 'off',
     'consistent-return': 'off', // TypeScript takes care of checking return
     'import/no-unresolved': 'off', // Doesn't work properly with TypeScript
+    'no-extra-parens': 'off',
+    '@typescript-eslint/no-extra-parens': [
+      // options from airbnb-base
+      'off',
+      'all',
+      {
+        conditionalAssign: true,
+        nestedBinaryExpressions: false,
+        returnAssign: false,
+        ignoreJSX: 'all', // delegate to eslint-plugin-react
+        enforceForArrowConditionals: false,
+      },
+    ],
 
     // Additional Fishbrain rules
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
@@ -88,15 +101,40 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+
+    // Disallow Magic Numbers
+    // https://eslint.org/docs/rules/no-magic-numbers
     'no-magic-numbers': [
       'error',
       { ignoreArrayIndexes: true, ignore: ALLOWED_NUMBERS },
     ],
+
+    // disallow dangling underscores in identifiers
+    // https://eslint.org/docs/rules/no-underscore-dangle
     'no-underscore-dangle': [
       'error',
       { allow: ['__PRELOADED_STATE__', '__APOLLO_STATE__'] },
     ],
+
+    // disallow the use of console
+    // https://eslint.org/docs/rules/no-console
     'no-console': 'off',
+
+    // Disallow assignments that can lead to race conditions due to usage of await or yield
+    // https://eslint.org/docs/rules/require-atomic-updates
+    'require-atomic-updates': 'error',
+
+    // disallow using an async function as a Promise executor
+    // https://eslint.org/docs/rules/no-async-promise-executor
+    'no-async-promise-executor': 'error',
+
+    // Disallow characters which are made with multiple code points in character class syntax
+    // https://eslint.org/docs/rules/no-misleading-character-class
+    'no-misleading-character-class': 'error',
+
+    // Disallow unnecessary catch clauses
+    // https://eslint.org/docs/rules/no-useless-catch
+    'no-useless-catch': 'error',
   },
   parserOptions: {
     project: './tsconfig.json',
