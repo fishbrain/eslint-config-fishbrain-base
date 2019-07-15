@@ -77,6 +77,7 @@ module.exports = {
     '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/promise-function-async': 'error',
     '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
+    '@typescript-eslint/no-reference-import': 'error',
     'fp/no-delete': 'error',
     'fp/no-let': 'error',
     'fp/no-loops': 'error',
