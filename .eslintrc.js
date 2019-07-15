@@ -31,6 +31,19 @@ module.exports = {
     'no-use-before-define': 'off',
     'consistent-return': 'off', // TypeScript takes care of checking return
     'import/no-unresolved': 'off', // Doesn't work properly with TypeScript
+    'no-extra-parens': 'off',
+    '@typescript-eslint/no-extra-parens': [
+      // options from airbnb-base
+      'off',
+      'all',
+      {
+        conditionalAssign: true,
+        nestedBinaryExpressions: false,
+        returnAssign: false,
+        ignoreJSX: 'all', // delegate to eslint-plugin-react
+        enforceForArrowConditionals: false,
+      },
+    ],
 
     // Additional Fishbrain rules
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
