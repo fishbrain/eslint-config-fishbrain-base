@@ -39,7 +39,6 @@ module.exports = {
       { allowExpressions: true },
     ],
     '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/no-extraneous-class': 'error',
     '@typescript-eslint/no-floating-promises': 'error',
