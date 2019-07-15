@@ -31,36 +31,6 @@ module.exports = {
     'consistent-return': 'off', // TypeScript takes care of checking return
     'import/no-unresolved': 'off', // Doesn't work properly with TypeScript
 
-    // Added Typescript extensions for some files
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: [
-          'test/**', // tape, common npm pattern
-          'tests/**', // also common npm pattern
-          'spec/**', // mocha, rspec-like pattern
-          '**/__tests__/**', // jest pattern
-          '**/__mocks__/**', // jest pattern
-          'test.{js,jsx}', // repos with a single test file
-          'test-*.{js,jsx}', // repos with multiple top-level test files
-          '**/*{.,_}{test,spec}.{js,jsx}', // tests where the extension or filename suffix denotes that it is a test
-          '**/jest.config.js', // jest config
-          '**/jest.setup.js', // jest setup
-          '**/vue.config.js', // vue-cli config
-          '**/webpack.config.{js,ts}', // webpack config
-          '**/webpack.config.*.{js,ts}', // webpack config
-          '**/rollup.config.js', // rollup config
-          '**/rollup.config.*.js', // rollup config
-          '**/gulpfile.js', // gulp config
-          '**/gulpfile.*.js', // gulp config
-          '**/Gruntfile{,.js}', // grunt config
-          '**/protractor.conf.js', // protractor config
-          '**/protractor.conf.*.js', // protractor config
-        ],
-        optionalDependencies: false,
-      },
-    ],
-
     // Additional Fishbrain rules
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
     '@typescript-eslint/explicit-function-return-type': [
@@ -77,7 +47,11 @@ module.exports = {
     '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/promise-function-async': 'error',
     '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
-    '@typescript-eslint/no-reference-import': 'error',
+    '@typescript-eslint/triple-slash-reference': [
+      'error',
+      { types: 'prefer-import' },
+    ],
+    '@typescript-eslint/prefer-readonly': 'error',
     'fp/no-delete': 'error',
     'fp/no-let': 'error',
     'fp/no-loops': 'error',
@@ -98,6 +72,8 @@ module.exports = {
           '**/*.stories.tsx',
           '**/*.stories.ts',
           '**/setupTests.ts',
+          '**/webpack.config.{js,ts}', // webpack config
+          '**/webpack.config.*.{js,ts}', // webpack config
         ],
       },
     ],
