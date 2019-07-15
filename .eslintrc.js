@@ -46,6 +46,7 @@ module.exports = {
     ],
 
     // Additional Fishbrain rules
+    '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
     '@typescript-eslint/explicit-function-return-type': [
       'error',
