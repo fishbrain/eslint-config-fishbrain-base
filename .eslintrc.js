@@ -149,6 +149,10 @@ module.exports = {
     // Disallow unnecessary catch clauses
     // https://eslint.org/docs/rules/no-useless-catch
     'no-useless-catch': 'error',
+
+    // no export from test file
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
+    'jest/no-export': 'error',
   },
   parserOptions: {
     project: './tsconfig.json',
