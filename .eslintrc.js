@@ -66,6 +66,11 @@ module.exports = {
       { types: 'prefer-import' },
     ],
     '@typescript-eslint/prefer-readonly': 'error',
+
+    // Warns if a type assertion does not change the type of an expression
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
+    '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+
     'fp/no-delete': 'error',
     'fp/no-let': 'error',
     'fp/no-loops': 'error',
