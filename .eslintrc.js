@@ -46,6 +46,7 @@ module.exports = {
     ],
 
     // Additional Fishbrain rules
+    '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
     '@typescript-eslint/explicit-function-return-type': [
       'error',
@@ -65,6 +66,19 @@ module.exports = {
       { types: 'prefer-import' },
     ],
     '@typescript-eslint/prefer-readonly': 'error',
+
+    // Warns if a type assertion does not change the type of an expression
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
+    '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+
+    // Enforce includes method over indexOf method
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-includes.md
+    '@typescript-eslint/prefer-includes': 'error',
+
+    // Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
+    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+
     'fp/no-delete': 'error',
     'fp/no-let': 'error',
     'fp/no-loops': 'error',
@@ -135,6 +149,10 @@ module.exports = {
     // Disallow unnecessary catch clauses
     // https://eslint.org/docs/rules/no-useless-catch
     'no-useless-catch': 'error',
+
+    // no export from test file
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
+    'jest/no-export': 'error',
   },
   parserOptions: {
     project: './tsconfig.json',
