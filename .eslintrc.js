@@ -75,6 +75,10 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-includes.md
     '@typescript-eslint/prefer-includes': 'error',
 
+    // Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
+    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+
     'fp/no-delete': 'error',
     'fp/no-let': 'error',
     'fp/no-loops': 'error',
