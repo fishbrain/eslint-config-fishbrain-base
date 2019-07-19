@@ -71,6 +71,10 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
 
+    // Enforce includes method over indexOf method
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-includes.md
+    '@typescript-eslint/prefer-includes': 'error',
+
     'fp/no-delete': 'error',
     'fp/no-let': 'error',
     'fp/no-loops': 'error',
