@@ -138,18 +138,6 @@ module.exports = {
     // https://eslint.org/docs/rules/require-atomic-updates
     'require-atomic-updates': 'error',
 
-    // disallow using an async function as a Promise executor
-    // https://eslint.org/docs/rules/no-async-promise-executor
-    'no-async-promise-executor': 'error',
-
-    // Disallow characters which are made with multiple code points in character class syntax
-    // https://eslint.org/docs/rules/no-misleading-character-class
-    'no-misleading-character-class': 'error',
-
-    // Disallow unnecessary catch clauses
-    // https://eslint.org/docs/rules/no-useless-catch
-    'no-useless-catch': 'error',
-
     // no export from test file
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
     'jest/no-export': 'error',
