@@ -15,7 +15,7 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm test
-      - run: npm version from-git
+      - run: npm version from-git --allow-same-version
 
   publish-npm:
     needs: build
