@@ -79,6 +79,8 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
 
+    curly: ['error', 'all'],
+
     'fp/no-delete': 'error',
     'fp/no-let': 'error',
     'fp/no-loops': 'error',
@@ -115,6 +117,7 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    'max-lines': ['error', { max: 300, skipComments: true }],
 
     // Disallow Magic Numbers
     // https://eslint.org/docs/rules/no-magic-numbers
