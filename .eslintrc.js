@@ -117,6 +117,17 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    // Allow typescript imports, airbnb has disallowed it
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     'max-lines': ['error', { max: 300, skipComments: true }],
 
     // Disallow Magic Numbers
