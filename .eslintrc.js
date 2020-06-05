@@ -47,7 +47,35 @@ module.exports = {
 
     // Additional Fishbrain rules
     '@typescript-eslint/await-thenable': 'error',
-    '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'default',
+        format: ['camelCase'],
+      },
+
+      {
+        selector: 'variable',
+        format: ['camelCase', 'UPPER_CASE'],
+      },
+      {
+        selector: 'parameter',
+        format: ['camelCase'],
+        leadingUnderscore: 'allow',
+      },
+
+      {
+        selector: 'memberLike',
+        modifiers: ['private'],
+        format: ['camelCase'],
+        leadingUnderscore: 'require',
+      },
+
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+    ],
     '@typescript-eslint/explicit-function-return-type': [
       'error',
       { allowExpressions: true },
@@ -161,7 +189,6 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    extraFileExtensions: ['.ts', '.tsx'],
   },
   env: {
     es6: true,
