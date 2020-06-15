@@ -47,7 +47,35 @@ module.exports = {
 
     // Additional Fishbrain rules
     '@typescript-eslint/await-thenable': 'error',
-    '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'default',
+        format: ['camelCase'],
+      },
+
+      {
+        selector: 'variable',
+        format: ['camelCase', 'UPPER_CASE'],
+      },
+      {
+        selector: 'parameter',
+        format: ['camelCase'],
+        leadingUnderscore: 'allow',
+      },
+
+      {
+        selector: 'memberLike',
+        modifiers: ['private'],
+        format: ['camelCase'],
+        leadingUnderscore: 'require',
+      },
+
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+    ],
     '@typescript-eslint/explicit-function-return-type': [
       'error',
       { allowExpressions: true },
@@ -78,6 +106,8 @@ module.exports = {
     // Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+
+    curly: ['error', 'all'],
 
     'fp/no-delete': 'error',
     'fp/no-let': 'error',
@@ -115,6 +145,18 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    // Allow typescript imports, airbnb has disallowed it
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'max-lines': ['error', { max: 300, skipComments: true }],
 
     // Disallow Magic Numbers
     // https://eslint.org/docs/rules/no-magic-numbers
@@ -138,18 +180,6 @@ module.exports = {
     // https://eslint.org/docs/rules/require-atomic-updates
     'require-atomic-updates': 'error',
 
-    // disallow using an async function as a Promise executor
-    // https://eslint.org/docs/rules/no-async-promise-executor
-    'no-async-promise-executor': 'error',
-
-    // Disallow characters which are made with multiple code points in character class syntax
-    // https://eslint.org/docs/rules/no-misleading-character-class
-    'no-misleading-character-class': 'error',
-
-    // Disallow unnecessary catch clauses
-    // https://eslint.org/docs/rules/no-useless-catch
-    'no-useless-catch': 'error',
-
     // no export from test file
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
     'jest/no-export': 'error',
@@ -159,7 +189,6 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    extraFileExtensions: ['.ts', '.tsx'],
   },
   env: {
     es6: true,
