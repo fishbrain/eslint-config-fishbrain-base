@@ -15,12 +15,12 @@ const ALLOWED_NUMBERS = Array.from(
 // eslint-disable-next-line fp/no-mutation
 module.exports = {
   extends: [
-    'airbnb-base',
-    'plugin:@typescript-eslint/recommended',
+    'airbnb-typescript/base',
+    // 'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
+    // 'plugin:import/errors',
+    // 'plugin:import/warnings',
+    // 'plugin:import/typescript',
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
   ],
