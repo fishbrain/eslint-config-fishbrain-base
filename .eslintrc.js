@@ -16,11 +16,6 @@ const ALLOWED_NUMBERS = Array.from(
 module.exports = {
   extends: [
     'airbnb-typescript/base',
-    // 'plugin:@typescript-eslint/recommended',
-    'plugin:jest/recommended',
-    // 'plugin:import/errors',
-    // 'plugin:import/warnings',
-    // 'plugin:import/typescript',
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
   ],
@@ -47,48 +42,26 @@ module.exports = {
 
     // Additional Fishbrain rules
     '@typescript-eslint/await-thenable': 'error',
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        selector: 'default',
-        format: ['camelCase'],
-      },
-
-      {
-        selector: 'variable',
-        format: ['camelCase', 'UPPER_CASE'],
-      },
-      {
-        selector: 'parameter',
-        format: ['camelCase'],
-        leadingUnderscore: 'allow',
-      },
-
-      {
-        selector: 'memberLike',
-        modifiers: ['private'],
-        format: ['camelCase'],
-        leadingUnderscore: 'require',
-      },
-
-      {
-        selector: 'typeLike',
-        format: ['PascalCase'],
-      },
-    ],
+    '@typescript-eslint/ban-ts-ignore': 'off',
+    // This rule required so many exceptions that it was getting difficult to maintain. So
+    // just name things sensibly :)
+    '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/explicit-function-return-type': [
       'error',
       { allowExpressions: true },
     ],
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
+    // Noop functions are a common pattern we use during testing, so we don't want to enable it.
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
     '@typescript-eslint/no-extraneous-class': 'error',
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-for-in-array': 'error',
+    '@typescript-eslint/no-inferrable-types': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/promise-function-async': 'error',
-    '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
     '@typescript-eslint/triple-slash-reference': [
       'error',
       { types: 'prefer-import' },
