@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/fishbrain/eslint-config-fishbrain-base#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^3.10.0",
     "@typescript-eslint/parser": "^3.3.0",
     "eslint-config-airbnb-typescript": "^8.0.2",
     "eslint-config-prettier": "^6.11.0",
