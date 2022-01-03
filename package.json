@@ -24,7 +24,7 @@
     "eslint-config-airbnb-typescript": "^8.0.2",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-fp": "^2.3.0",
-    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jest": "^25.2.4",
     "eslint-plugin-prettier": "^4.0.0"
   },
