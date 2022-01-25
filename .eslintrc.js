@@ -17,7 +17,7 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
-    'airbnb-typescript-prettier'
+    'airbnb-typescript-prettier',
   ],
   plugins: ['jest', 'fp'],
   rules: {
@@ -159,6 +159,9 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
+    },
+    react: {
+      version: 'detect',
     },
   },
 };
