@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fishbrain-base",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "ESLint config for Fishbrain TypeScript projects",
   "main": ".eslintrc.js",
   "scripts": {
@@ -19,22 +19,17 @@
   },
   "homepage": "https://github.com/fishbrain/eslint-config-fishbrain-base#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.10.1",
-    "@typescript-eslint/parser": "^3.10.1",
-    "eslint-config-airbnb-typescript": "^8.0.2",
-    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "eslint-plugin-fp": "^2.3.0",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-jest": "^26.0.0",
-    "eslint-plugin-prettier": "^4.0.0"
+    "eslint-plugin-jest": "^26.0.0"
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
   },
   "devDependencies": {
-    "eslint": "^7.20.0",
-    "prettier": "^2.2.1",
-    "typescript": "^4.1.5"
+    "eslint": "^8.7.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
   }
 }
