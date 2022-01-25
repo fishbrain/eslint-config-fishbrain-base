@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
+      - run: git config --global user.email "developer@fishbrain.com"
+      - run: git config --global user.name "Fishbrain"
       - run: npm ci
       - run: npm test
       - run: npm version from-git --allow-same-version
