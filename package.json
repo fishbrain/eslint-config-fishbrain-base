@@ -22,7 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "eslint-plugin-fp": "^2.3.0",
-    "eslint-plugin-jest": "^26.0.0"
+    "eslint-plugin-jest": "^27.0.1"
   },
   "prettier": {
     "singleQuote": true,
