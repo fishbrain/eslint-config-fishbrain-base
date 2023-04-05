@@ -15,30 +15,17 @@ const ALLOWED_NUMBERS = Array.from(
 // eslint-disable-next-line fp/no-mutation
 module.exports = {
   extends: [
-    'airbnb-typescript/base',
-    'plugin:prettier/recommended',
-    'prettier/@typescript-eslint',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jest/recommended',
+    'airbnb-typescript-prettier',
   ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'jest', 'fp', 'import'],
+  plugins: ['jest', 'fp'],
   rules: {
     // Core rules replaced by Typescript rules
     'no-use-before-define': 'off',
     'consistent-return': 'off', // TypeScript takes care of checking return
     'import/no-unresolved': 'off', // Doesn't work properly with TypeScript
     'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': [
-      // options from airbnb-base
-      'off',
-      'all',
-      {
-        conditionalAssign: true,
-        nestedBinaryExpressions: false,
-        returnAssign: false,
-        ignoreJSX: 'all', // delegate to eslint-plugin-react
-        enforceForArrowConditionals: false,
-      },
-    ],
 
     // Additional Fishbrain rules
     '@typescript-eslint/await-thenable': 'error',
@@ -172,6 +159,9 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
+    },
+    react: {
+      version: 'detect',
     },
   },
 };

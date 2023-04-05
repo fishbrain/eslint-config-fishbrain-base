@@ -67,3 +67,8 @@ To enable ESLint in VS Code add the following to your `settings.json`:
 ### Web Projects
 
 For ESLint rules for React based web projects, see: https://github.com/fishbrain/eslint-config-fishbrain
+
+## Deploying
+
+To trigger a release, merge changes into the `master` branch with an updated package version. This
+will trigger a Github Actions workflow to deploy a release.
