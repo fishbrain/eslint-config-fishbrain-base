@@ -17,9 +17,9 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
-    'airbnb-typescript-prettier',
+    'plugin:import/recommended',
   ],
-  plugins: ['jest', 'fp'],
+  plugins: ['jest', 'fp', 'prettier'],
   rules: {
     // Core rules replaced by Typescript rules
     'no-use-before-define': 'off',
@@ -135,6 +135,7 @@ module.exports = {
     // disallow the use of console
     // https://eslint.org/docs/rules/no-console
     'no-console': 'off',
+    'prettier/prettier': 'error',
 
     // Disallow assignments that can lead to race conditions due to usage of await or yield
     // https://eslint.org/docs/rules/require-atomic-updates
@@ -159,9 +160,6 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
-    },
-    react: {
-      version: 'detect',
     },
   },
 };
