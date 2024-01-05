@@ -33,10 +33,6 @@ module.exports = {
     // This rule required so many exceptions that it was getting difficult to maintain. So
     // just name things sensibly :)
     '@typescript-eslint/naming-convention': 'off',
-    '@typescript-eslint/explicit-function-return-type': [
-      'error',
-      { allowExpressions: true },
-    ],
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
     // Noop functions are a common pattern we use during testing, so we don't want to enable it.
@@ -79,6 +75,7 @@ module.exports = {
         allowThis: true,
       },
     ],
+    'import/named': 'off', // Redundant when used with Typescript.
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -123,13 +120,6 @@ module.exports = {
     'no-magic-numbers': [
       'error',
       { ignoreArrayIndexes: true, ignore: ALLOWED_NUMBERS },
-    ],
-
-    // disallow dangling underscores in identifiers
-    // https://eslint.org/docs/rules/no-underscore-dangle
-    'no-underscore-dangle': [
-      'error',
-      { allow: ['__PRELOADED_STATE__', '__APOLLO_STATE__'] },
     ],
 
     // disallow the use of console
