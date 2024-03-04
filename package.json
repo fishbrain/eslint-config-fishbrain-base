@@ -20,7 +20,7 @@
   "homepage": "https://github.com/fishbrain/eslint-config-fishbrain-base#readme",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^6.13.2",
+    "@typescript-eslint/parser": "^7.0.1",
     "eslint": "^8.55.0",
     "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-import": "^2.29.0",
