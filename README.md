@@ -1,3 +1,9 @@
+**THIS REPOSITORY IS NO LONGER MAINTAINED**
+
+Use https://github.com/fishbrain/eslint-config-fishbrain instead.
+
+---
+
 # ESLint config for Fishbrain TypeScript projects
 
 [![npm version](https://badge.fury.io/js/eslint-config-fishbrai-base.svg)](https://badge.fury.io/js/eslint-config-fishbrain-base)
